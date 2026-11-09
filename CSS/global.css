@@ -1,0 +1,732 @@
+/* =====================================================
+RESET / GLOBAL
+===================================================== */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #222222;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+NAVBAR
+===================================================== */
+
+.site-header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* =====================================================
+NAVBAR CONTAINER
+===================================================== */
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* =====================================================
+LOGO
+===================================================== */
+
+.brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+/* =====================================================
+MENU
+===================================================== */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-link {
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    color: #777777;
+    transition: color 0.3s ease;
+}
+
+
+/* HOVER */
+
+.nav-link:hover {
+    color: #EA580C;
+}
+
+
+/* ACTIVE */
+
+.nav-link.active {
+    color: #EA580C;
+    font-weight: 600;
+}
+
+
+/* GARIS BAWAH MENU */
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #EA580C;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+SEARCH
+===================================================== */
+
+.search-box {
+    flex: 1;
+    max-width: 350px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f8f8f8;
+    transition: border-color 0.3s ease;
+}
+
+
+/* SEARCH FOCUS */
+
+.search-box:focus-within {
+    border-color: #EA580C;
+}
+
+
+/* INPUT */
+
+.search-box input {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    background: transparent;
+    font-size: 14px;
+    color: #222222;
+}
+
+
+/* PLACEHOLDER */
+
+.search-box input::placeholder {
+    color: #999999;
+}
+
+
+/* SEARCH BUTTON */
+
+.search-button {
+    width: 45px;
+    height: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* FONT AWESOME SEARCH ICON */
+
+.search-button i {
+    font-size: 18px;
+    color: #444444;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* SEARCH HOVER */
+
+.search-button:hover i {
+    color: #EA580C;
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+NAVBAR ACTION
+===================================================== */
+
+.nav-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+/* =====================================================
+ICON CART / USER
+===================================================== */
+
+.nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: #444444;
+    transition: color 0.3s ease;
+}
+
+
+/* FONT AWESOME ICON */
+
+.nav-icon i {
+    font-size: 20px;
+    color: currentColor;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* TEXT ICON */
+
+.nav-icon small {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+/* HOVER ICON */
+
+.nav-icon:hover {
+    color: #EA580C;
+}
+
+.nav-icon:hover i {
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+LOGIN BUTTON
+===================================================== */
+
+.btn-login {
+    padding: 10px 20px;
+    background: #EA580C;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* LOGIN HOVER */
+
+.btn-login:hover {
+    background: #c94d0b;
+    transform: translateY(-1px);
+    box-shadow:
+        0 5px 15px rgba(234, 88, 12, 0.25);
+}
+
+
+/* =====================================================
+HAMBURGER
+===================================================== */
+
+.menu-toggle {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+
+/* FONT AWESOME HAMBURGER */
+
+.menu-toggle i {
+    font-size: 24px;
+    color: #222222;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* HAMBURGER HOVER */
+
+.menu-toggle:hover {
+    background: #f5f5f5;
+}
+
+.menu-toggle:hover i {
+    color: #EA580C;
+}
+
+
+/* =====================================================
+MOBILE MENU
+===================================================== */
+
+.mobile-menu {
+    display: none;
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero-section {
+    width: 100%;
+    padding: 45px 0;
+}
+
+
+/* HERO CARD */
+
+.hero-card {
+    min-height: 420px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 50px 60px;
+
+    background: #fff7f2;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+}
+
+
+.hero-kicker {
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #EA580C;
+}
+
+
+.hero-title {
+    font-size: 48px;
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    color: #1f1f1f;
+}
+
+
+.hero-title span {
+    display: block;
+
+    color: #EA580C;
+}
+
+
+.hero-description {
+    max-width: 480px;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #666666;
+}
+
+
+/* =====================================================
+   HERO BUTTON
+===================================================== */
+
+.btn-buy {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 8px;
+
+    padding: 13px 24px;
+
+    background: #EA580C;
+    color: #ffffff;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.btn-buy:hover {
+    background: #c94d0b;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(234, 88, 12, 0.2);
+}
+
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.hero-image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* SHADOW DI BAWAH GAMBAR */
+
+.hero-image-wrap::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 260px;
+    height: 28px;
+
+    background: rgba(0, 0, 0, 0.15);
+
+    border-radius: 50%;
+
+    filter: blur(10px);
+
+    z-index: 0;
+
+    transition:
+        width 0.4s ease,
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* GAMBAR */
+
+.hero-image {
+    width: 100%;
+    max-width: 460px;
+
+    object-fit: contain;
+
+    position: relative;
+    z-index: 1;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* HOVER */
+
+.hero-image-wrap:hover .hero-image {
+    transform: translateY(-6px) scale(1.05);
+}
+
+
+/* SHADOW IKUT BERUBAH SAAT HOVER */
+
+.hero-image-wrap:hover::after {
+    width: 300px;
+
+    opacity: 0.75;
+
+    transform:
+        translateX(-50%)
+        scaleX(1.05);
+}
+
+/* =====================================================
+   ABOUT SECTION
+===================================================== */
+
+.about-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-kicker {
+    margin-bottom: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #EA580C;
+}
+
+.section-heading h2 {
+    margin-bottom: 15px;
+
+    font-size: 34px;
+    line-height: 1.2;
+
+    color: #1f1f1f;
+}
+
+.section-description {
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #777777;
+}
+
+
+/* =====================================================
+   ABOUT GRID
+===================================================== */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+/* =====================================================
+   ABOUT CARD
+===================================================== */
+
+.about-card {
+    min-height: 360px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 24px;
+
+    padding: 35px;
+
+    background: #f8f8f8;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* HOVER */
+
+.about-card:hover {
+    transform: translateY(-10px);
+    border-color: #f3c7ae;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.about-card-content {
+    width: 100%;
+    text-align: center;
+}
+.about-card h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #222222;
+    text-align: center;
+}
+
+.about-card p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #777777;
+    text-align: center;
+    align-items: center;
+}
+
+
+/* =====================================================
+IMAGE
+===================================================== */
+.about-image-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
+/* SHADOW DI BAWAH GAMBAR */
+.about-image-wrap::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 18px;
+    background: rgba(0, 0, 0, 0.40);
+    border-radius: 50%;
+    filter: blur(8px);
+    z-index: 0;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 240px;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover .about-image {
+    transform: translateY(-4px) scale(1.20);
+}

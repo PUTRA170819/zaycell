@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Second Cell</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/CSS/global.css">
+    <link rel="stylesheet" href="/CSS/responsive.css">
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+</head>
+
+
+<body>
+
+<!-- ======HEADER / NAVBAR ====================================================== -->
+
+<header class="site-header">
+
+    <div class="container navbar">
+
+        <!-- LOGO -->
+        <a href="index.html" class="brand" aria-label="Second Cell Home">
+            <img src="asset/logo/S-letter-mark-transparent.png" alt="Logo Second Cell" class="brand-logo">
+        </a>
+
+        <!-- MENU DESKTOP -->
+        <nav class="nav-menu" id="navMenu">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#products" class="nav-link">Produk Kami</a>
+            <a href="#about" class="nav-link">Tentang Kami</a>
+        </nav>
+
+
+        <!-- SEARCH -->
+        <form class="search-box" role="search">
+            <input type="search"placeholder="Cari produk..." aria-label="Cari produk">
+
+            <button type="submit" class="search-button" aria-label="Cari">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+
+        <!-- NAV ACTION -->
+        <div class="nav-actions">
+
+            <!-- KERANJANG /CART  -->
+            <a href="pages/cart.html" class="nav-icon" aria-label="Keranjang">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <small>
+                    Keranjang
+                </small>
+            </a>
+
+
+            <!-- USER -->
+            <a href="pages/profile.html" class="nav-icon"  aria-label="Akun Saya">
+                <i class="fa-regular fa-user"></i>
+                <small>
+                    Saya
+                </small>
+            </a>
+
+
+            <!-- LOGIN -->
+            <a href="pages/login.html" class="btn-login">
+                Login
+            </a>
+
+        </div>
+
+
+        <!-- HAMBURGER MOBILE -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+    <!-- ===== MOBILE MENU DI NAVIGASI ====================================================== -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#products" class="mobile-link">Produk Kami</a>
+        <a href="#about" class="mobile-link">Tentang Kami</a>
+        <a href="pages/login.html" class="mobile-login">
+            Login
+        </a>
+
+    </div>
+</header>
+
+<!-- ========== HERO SECTION ====================================================== -->
+
+<main>
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="hero-card">
+
+                <!-- HERO TEXT -->
+                <div class="hero-content">
+                    <p class="hero-kicker" >Temukan</p>
+
+                    <h1 class="hero-title">SmartPhone
+                        <span>Impian Kamu!</span>
+                    </h1>
+
+                    <p class="hero-description">Temukan smartphone berkualitas dengan harga terbaik untuk kebutuhan kamu.</p>
+                    <a href="#products" class="btn-buy">Belanja Sekarang</a>
+                </div>
+
+
+                <!-- HERO IMAGE -->
+                <div class="hero-image-wrap">
+                    <img src="asset/GAMBAR 1.png" alt="Kumpulan smartphone Second Cell" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- =====================================================
+TENTANG KAMI
+====================================================== -->
+
+<section class="about-section" id="about">
+
+    <div class="container">
+
+        <!-- JUDUL SECTION -->
+        <div class="section-heading">
+            <p class="section-kicker">Tentang Kami</p>
+            <h2>Kenapa Belanja di Second Cell?</h2>
+
+            <p class="section-description">
+                Second Cell menyediakan smartphone second dan aksesoris
+                berkualitas yang sudah melalui proses pengecekan sebelum dijual.
+            </p>
+
+        </div>
+
+
+        <!-- CARD -->
+        <div class="about-grid">
+
+            <!-- CARD 1 -->
+            <article class="about-card">
+                <div class="about-card-content">
+                    <h3>Handphone Second</h3>
+                    <p>
+                        Kami menyediakan berbagai pilihan smartphone second
+                        dengan kondisi berkualitas dan siap digunakan.
+                    </p>
+                </div>
+
+                <div class="about-image-wrap">
+                    <img src="asset/Samsung s25.png" alt="Handphone Second" class="about-image">
+                </div>
+            </article>
+
+
+            <!-- CARD 2 -->
+            <article class="about-card">
+                <div class="about-card-content">
+                    <h3>Aksesoris Handphone</h3>
+                    <p>
+                        Lengkapi kebutuhan smartphone kamu dengan berbagai
+                        pilihan aksesoris yang praktis dan berkualitas.
+                    </p>
+                </div>
+                <div class="about-image-wrap">
+                    <img src="asset/Case hp.png" alt="Aksesoris Handphone" class="about-image">
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+
+</html>

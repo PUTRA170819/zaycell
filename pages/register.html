@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Register - Second Cell</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/CSS/style_register.css">
+</head>
+
+<body>
+
+    <main class="register-page">
+        <!-- =========================
+            REGISTER CONTAINER
+        ========================== -->
+        <section class="register-container">
+
+
+            <!-- =========================
+                BAGIAN KIRI
+            ========================== -->
+            <div class="register-info">
+
+                <div class="register-info-content">
+
+                    <div class="register-info-text">
+
+                        <h1>
+                            Buat Akun Baru
+                        </h1>
+
+                        <p>
+                            Daftar sekarang dan nikmati
+                            kemudahan berbelanja.
+                        </p>
+
+                    </div>
+
+
+                    <!-- GAMBAR -->
+                    <div class="register-image-wrapper">
+
+                        <img
+                            src="/asset/GAMBAR 1.png"
+                            alt="Produk Second Cell"
+                            class="register-image"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+            BAGIAN KANAN FORM REGISTER
+            ========================== -->
+            <div class="register-form-section">
+
+                <div class="register-form-wrapper">
+
+                    <h2 class="form-title">
+                        Register
+                    </h2>
+
+
+                    <form class="register-form">
+
+
+                        <!-- NAMA -->
+                        <div class="form-group">
+
+                            <label for="nama">
+                                Nama Lengkap
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nama"
+                                name="nama"
+                                placeholder="Masukkan nama lengkap"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Masukkan email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- NOMOR HP -->
+                        <div class="form-group">
+
+                            <label for="noHp">
+                                No. HP
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="noHp"
+                                name="noHp"
+                                placeholder="Masukkan no. hp"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+                        <div class="form-group">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <div class="password-input">
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    placeholder="Masukkan password"
+                                    required
+                                >
+
+                                <!-- Icon mata -->
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    aria-label="Lihat password"
+                                >
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M12 5C6.5 5 2.1 8.5 1 12c1.1 3.5 5.5 7 11 7s9.9-3.5 11-7c-1.1-3.5-5.5-7-11-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-6.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"
+                                        />
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- AGREEMENT -->
+                        <div class="form-agreement">
+
+                            <input
+                                type="checkbox"
+                                id="agreement"
+                                name="agreement"
+                                required
+                            >
+
+                            <label for="agreement">
+                                Saya setuju dengan
+                                <a href="#">
+                                    Syarat & Ketentuan
+                                </a>
+                            </label>
+
+                        </div>
+
+
+                        <!-- REGISTER BUTTON -->
+                        <button
+                            type="submit"
+                            class="btn-register"
+                        >
+                            Daftar
+                        </button>
+
+                    </form>
+
+
+                    <!-- LOGIN -->
+                    <p class="login-text">
+
+                        Sudah punya akun?
+
+                        <a href="login.html">
+                            Login di sini
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Script kecil khusus icon mata -->
+    <script>
+
+        const passwordInput =
+            document.querySelector("#password");
+
+        const passwordToggle =
+            document.querySelector(".password-toggle");
+
+
+        passwordToggle.addEventListener("click", function () {
+
+            const currentType =
+                passwordInput.getAttribute("type");
+
+
+            if (currentType === "password") {
+
+                passwordInput.setAttribute("type", "text");
+
+            } else {
+
+                passwordInput.setAttribute("type", "password");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

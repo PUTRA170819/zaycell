@@ -1,0 +1,391 @@
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .navbar {
+        min-height: 70px;
+        gap: 18px;
+    }
+
+    /* Menu desktop disembunyikan */
+    .nav-menu {
+        display: none;
+    }
+
+    /* Search fleksibel */
+    .search-box {
+        max-width: none;
+        flex: 1;
+    }
+
+    /* Teks icon disembunyikan */
+    .nav-icon small {
+        display: none;
+    }
+
+    /* Hamburger mulai muncul */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* HERO TABLET */
+    .hero-card {
+        padding: 40px;
+        gap: 30px;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-card {
+        min-height: 280px;
+    }
+}
+
+
+/* =====================================================
+MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+    /* =================================================
+    NAVBAR
+    ================================================= */
+
+    .navbar {
+        min-height: 65px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        padding: 10px 0;
+    }
+
+
+    /* LOGO */
+
+    .brand {
+        flex-shrink: 0;
+    }
+
+    .brand-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    /* =================================================
+       CART + USER
+    ================================================= */
+
+    .nav-actions {
+        display: flex;
+
+        align-items: center;
+
+        gap: 14px;
+
+        margin-left: auto;
+    }
+
+    .nav-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #444444;
+    }
+
+    .nav-icon i {
+        font-size: 20px;
+    }
+
+    /* teks "Keranjang" dan "Saya" disembunyikan */
+    .nav-icon small {
+        display: none;
+    }
+
+    /* Login desktop jangan tampil di baris atas mobile */
+    .btn-login {
+        display: none;
+    }
+
+
+    /* =================================================
+       HAMBURGER
+    ================================================= */
+
+    .menu-toggle {
+        display: flex;
+
+        margin-left: 0;
+
+        width: 42px;
+        height: 42px;
+    }
+
+    .menu-toggle i {
+        font-size: 24px;
+    }
+
+
+    /* =================================================
+       SEARCH PINDAH KE BARIS KEDUA
+    ================================================= */
+
+    .search-box {
+        order: 3;
+
+        flex-basis: 100%;
+
+        width: 100%;
+        max-width: 100%;
+
+        height: 42px;
+    }
+
+
+    /* =================================================
+       MOBILE MENU
+    ================================================= */
+
+    .mobile-menu {
+        width: 100%;
+
+        background: #ffffff;
+
+        display: flex;
+        flex-direction: column;
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        opacity: 0;
+
+        padding-left: 4%;
+        padding-right: 4%;
+
+        transition:
+            max-height 0.3s ease,
+            opacity 0.3s ease,
+            padding 0.3s ease;
+    }
+
+
+    /* SAAT MENU DIBUKA */
+
+    .mobile-menu.active {
+        max-height: 500px;
+
+        opacity: 1;
+
+        padding-top: 15px;
+        padding-bottom: 20px;
+
+        border-top: 1px solid #eeeeee;
+    }
+
+
+    /* LINK MOBILE */
+
+    .mobile-link {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        padding: 14px 0;
+
+        border-bottom: 1px solid #eeeeee;
+
+        color: #555555;
+
+        font-size: 15px;
+
+        transition: color 0.3s ease;
+    }
+
+    .mobile-link:hover {
+        color: #EA580C;
+    }
+
+    .mobile-link.active {
+        color: #EA580C;
+        font-weight: 600;
+    }
+
+
+    /* ICON MOBILE */
+
+    .mobile-link i {
+        width: 22px;
+
+        font-size: 17px;
+
+        color: #EA580C;
+    }
+
+
+    /* LOGIN MOBILE */
+
+    .mobile-login {
+        margin-top: 15px;
+
+        padding: 12px;
+
+        text-align: center;
+
+        background: #EA580C;
+        color: #ffffff;
+
+        border-radius: 8px;
+
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .mobile-login:hover {
+        background: #c94d0b;
+    }
+
+
+    /* =================================================
+       HERO MOBILE
+    ================================================= */
+
+    .hero-section {
+        padding: 25px 0;
+    }
+
+    .hero-card {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding: 35px 25px;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        max-width: 330px;
+    }
+
+    .about-section {
+    padding: 60px 0;
+}
+/* =======section ==============*/
+.section-heading {
+    margin-bottom: 30px;
+}
+.section-heading h2 {
+    font-size: 28px;
+}
+.about-card {
+    padding: 30px 25px;
+}
+.about-card h3 {
+    font-size: 21px;
+}
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 94%;
+    }
+
+
+    /* NAVBAR */
+
+    .brand-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .nav-icon i {
+        font-size: 19px;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-toggle i {
+        font-size: 22px;
+    }
+
+    .search-box {
+        height: 40px;
+    }
+
+    .search-box input {
+        font-size: 13px;
+    }
+
+
+    /* HERO */
+
+    .hero-card {
+        padding: 30px 20px;
+
+        border-radius: 18px;
+    }
+
+    .hero-kicker {
+        font-size: 15px;
+    }
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .btn-buy {
+        width: 100%;
+
+        padding: 12px 18px;
+    }
+
+    .hero-image {
+        max-width: 280px;
+    }
+}
